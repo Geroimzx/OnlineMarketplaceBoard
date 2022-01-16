@@ -1,0 +1,42 @@
+group 'org.geroimzx'
+version '0.1-beta'
+
+repositories {
+    mavenCentral()
+}
+
+plugins {
+    id 'java'
+    id 'war'
+    id 'org.springframework.boot' version '2.5.3'
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    // Spring Boot Starter
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.6.2'
+
+    // Spring Boot Web
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.6.2'
+
+    // Spring Boot Validation
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '2.6.2'
+
+    // Spring Boot Test
+    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.6.2'
+
+    // Spring Boot Devtools
+    implementation group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.6.2'
+
+    // Spring Boot MongoDB
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '2.6.2'
+
+    // Spring Boot Security
+    //implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.5.3'
+}
+
+test {
+    useJUnitPlatform()
+}
