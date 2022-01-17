@@ -27,8 +27,5 @@ test {
     useJUnitPlatform()
 }
 
-bootRun {
-    if (project.hasProperty('args')) {
-        args project.args.split(',')
-    }
-}
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
