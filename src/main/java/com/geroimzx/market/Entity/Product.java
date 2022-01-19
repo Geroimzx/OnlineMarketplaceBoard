@@ -18,6 +18,7 @@ public class Product {
     private List<ProductCharacteristic> characteristics;
 
     public Product() {
+
     }
 
     public Product(String name, String description, double price) {
